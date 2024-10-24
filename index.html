@@ -20,10 +20,15 @@
                 }
             }
         </style>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+            };
+        </script>
     </head>
     <body>
-        <div class="header flex justify-between px-10">
-            <h1>App Store</h1>
+        <header class="flex justify-between items-center px-10 py-2 border-b">
+            <h1 class="text-2xl font-medium">App Store</h1>
             <ul class="flex gap-2">
                 <li class="items_header">
                     <a href="#"> My Apps </a>
@@ -34,16 +39,20 @@
                 <li class="items_header">
                     <a href="#"> Settings </a>
                 </li>
-                <li><button></button></li>
+                <li class="flex items-center">
+                    <button
+                        class="dark-theme px-2 py-1 hover:text-blue-500 bg-gray-100 hover:bg-gray-200 rounded-md transition"
+                    >
+                        <i class="fa-solid fa-moon hidden"></i>
+                        <i class="fa-solid fa-sun hidden"></i>
+                    </button>
+                </li>
             </ul>
-        </div>
-
-        <div class="menu"></div>
-
-        <div class="apps"></div>
-
-        <div class="footer">
+        </header>
+        <main></main>
+        <footer class="border-t">
             <p>Made by: SloudPL & LakioLive</p>
-        </div>
+        </footer>
     </body>
+    <script src="./js/darkTheme.js"></script>
 </html>
