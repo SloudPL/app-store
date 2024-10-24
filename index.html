@@ -1,36 +1,169 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Store</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <div class="header">
-
-        <h1>App Store</h1>
-
-    </div>
-
-    <div class="menu">
-
-        
-
-    </div>
-
-    <div class="apps">
-
-
-
-    </div>
-
-    <div class="footer">
-
-        <p>Made by: SloudPL & LakioLive</p>
-
-    </div>
-
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App Store</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .items_header {
+                    @apply px-2 py-1 rounded-md hover:text-blue-500 hover:bg-gray-100 transition;
+                }
+            }
+        </style>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+            };
+        </script>
+    </head>
+    <body>
+        <header class="flex justify-between items-center px-10 py-4 border-b">
+            <h3 class="text-2xl font-medium">App Store</h3>
+            <ul class="flex gap-2">
+                <li class="items_header">
+                    <a href="https://sloud.pl/"> Strona Główna </a>
+                </li>
+                <li class="items_header">
+                    <a href="https://status.sloud.pl/"> Status </a>
+                </li>
+                <li class="items_header">
+                    <a href="https://speedtest.sloudhost.ovh/"> Speedtest </a>
+                </li>
+                <li class="flex items-center">
+                    <button
+                        class="dark-theme w-8 h-8 hover:text-blue-500 bg-gray-100 hover:bg-gray-200 rounded-md transition"
+                    >
+                        <i class="fa-solid fa-moon hidden"></i>
+                        <i class="fa-solid fa-sun hidden"></i>
+                    </button>
+                </li>
+            </ul>
+        </header>
+        <main class="h-full bg-gray-50">
+            <div class="px-10 py-5">
+                <h3 class="mb-3 text-2xl font-medium">Aplikacje</h3>
+                <div class="grid xl:grid-cols-2 gap-5 p-8 bg-white rounded-2xl">
+                    <div
+                        class="flex justify-between items-center gap-3 cursor-pointer"
+                    >
+                        <div class="flex gap-5">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfEhguRRbwfoedGpldqYUPlSnhhol80KUcRg&s"
+                                alt="app"
+                                class="w-40 rounded-2xl"
+                            />
+                            <div class="grid content-center">
+                                <h6 class="text-2xl font-medium">
+                                    Example name of app
+                                </h6>
+                                <p class="text-lg text-gray-400">
+                                    Description for app
+                                    <br>
+                                    Version: 1.0.0
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="px-6 py-3 text-white font-medium bg-blue-500 hover:bg-blue-600 rounded-xl transition"
+                        >
+                            Download
+                        </button>
+                    </div>
+                    <div
+                        class="flex justify-between items-center gap-3 cursor-pointer"
+                    >
+                        <div class="flex gap-5">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfEhguRRbwfoedGpldqYUPlSnhhol80KUcRg&s"
+                                alt="app"
+                                class="w-40 rounded-2xl"
+                            />
+                            <div class="grid content-center">
+                                <h6 class="text-2xl font-medium">
+                                    Example name of app
+                                </h6>
+                                <p class="text-lg text-gray-400">
+                                    Description for app
+                                    <br>
+                                    Version: 1.0.0
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="px-6 py-3 text-white font-medium bg-blue-500 hover:bg-blue-600 rounded-xl transition"
+                        >
+                            Download
+                        </button>
+                    </div>
+                    <div
+                        class="flex justify-between items-center gap-3 cursor-pointer"
+                    >
+                        <div class="flex gap-5">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfEhguRRbwfoedGpldqYUPlSnhhol80KUcRg&s"
+                                alt="app"
+                                class="w-40 rounded-2xl"
+                            />
+                            <div class="grid content-center">
+                                <h6 class="text-2xl font-medium">
+                                    Example name of app
+                                </h6>
+                                <p class="text-lg text-gray-400">
+                                    Description for app
+                                    <br>
+                                    Version: 1.0.0
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="px-6 py-3 text-white font-medium bg-blue-500 hover:bg-blue-600 rounded-xl transition"
+                        >
+                            Download
+                        </button>
+                    </div>
+                    <div
+                        class="flex justify-between items-center gap-3 cursor-pointer"
+                    >
+                        <div class="flex gap-5">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfEhguRRbwfoedGpldqYUPlSnhhol80KUcRg&s"
+                                alt="app"
+                                class="w-40 rounded-2xl"
+                            />
+                            <div class="grid content-center">
+                                <h6 class="text-2xl font-medium">
+                                    Example name of app
+                                </h6>
+                                <p class="text-lg text-gray-400">
+                                    Description for app
+                                    <br>
+                                    Version: 1.0.0
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="px-6 py-3 text-white font-medium bg-blue-500 hover:bg-blue-600 rounded-xl transition"
+                        >
+                            Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="px-10 py-5 border-t">
+            <p>Made by: SloudPL & LakioLive</p>
+            <p>Copyright SLOUD.PL © 2024</p>
+        </footer>
+    </body>
+    <script src="./js/darkTheme.js"></script>
 </html>
