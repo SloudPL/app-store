@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Store</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>App Store</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .items_header {
+                    @apply px-2 py-1 rounded-md hover:text-blue-500 hover:bg-gray-100 transition;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header flex justify-between px-10">
+            <h1>App Store</h1>
+            <ul class="flex gap-2">
+                <li class="items_header">
+                    <a href="#"> My Apps </a>
+                </li>
+                <li class="items_header">
+                    <a href="#"> Updates </a>
+                </li>
+                <li class="items_header">
+                    <a href="#"> Settings </a>
+                </li>
+                <li><button></button></li>
+            </ul>
+        </div>
 
-    <div class="header">
+        <div class="menu"></div>
 
-        <h1>App Store</h1>
+        <div class="apps"></div>
 
-    </div>
-
-    <div class="menu">
-
-        
-
-    </div>
-
-    <div class="apps">
-
-
-
-    </div>
-
-    <div class="footer">
-
-        <p>Made by: SloudPL & LakioLive</p>
-
-    </div>
-
-</body>
+        <div class="footer">
+            <p>Made by: SloudPL & LakioLive</p>
+        </div>
+    </body>
 </html>
