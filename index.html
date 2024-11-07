@@ -28,7 +28,7 @@
                 }
 
                 .info-card {
-                    @apply grid gap-3;
+                    @apply relative grid gap-3;
                 }
 
                 .img-card {
@@ -41,6 +41,10 @@
 
                 .descr-card {
                     @apply text-xs sm:text-base md:text-lg text-gray-400 dark:text-gray-400;
+                }
+
+                .dropdown-card {
+                    @apply absolute -bottom-[120px] md:-bottom-3.5 md:-right-5 mt-2 w-full md:w-40 bg-white dark:bg-gray-700 rounded-xl z-10 shadow-lg;
                 }
             }
         </style>
@@ -117,7 +121,7 @@
                         </button>
                         <div
                             id="dropdown1"
-                            class="absolute top-[52px] -right-6 md:top-24 md:-right-5 mt-2 w-40 bg-white dark:bg-gray-700 rounded-xl shadow-lg hidden"
+                            class="dropdown-card hidden"
                             onmouseenter="showDropdown('dropdown1')"
                             onmouseleave="hideDropdown('dropdown1')"
                         >
@@ -126,21 +130,24 @@
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-windows"></i> Windows</a
+                                        ><i class="fa-brands fa-windows"></i>
+                                        Windows</a
                                     >
                                 </li>
                                 <li>
                                     <as
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-linux"></i> Linux</as
+                                        ><i class="fa-brands fa-linux"></i>
+                                        Linux</as
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-android"></i> Android</a
+                                        ><i class="fa-brands fa-android"></i>
+                                        Android</a
                                     >
                                 </li>
                             </ul>
@@ -179,7 +186,7 @@
                         </button>
                         <div
                             id="dropdown2"
-                            class="absolute top-[52px] -right-6 md:top-24 md:-right-5 mt-2 w-40 bg-white dark:bg-gray-700 rounded-xl shadow-lg hidden"
+                            class="dropdown-card hidden"
                             onmouseenter="showDropdown('dropdown2')"
                             onmouseleave="hideDropdown('dropdown2')"
                         >
@@ -188,21 +195,24 @@
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-windows"></i> Windows</a
+                                        ><i class="fa-brands fa-windows"></i>
+                                        Windows</a
                                     >
                                 </li>
                                 <li>
                                     <as
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-linux"></i> Linux</as
+                                        ><i class="fa-brands fa-linux"></i>
+                                        Linux</as
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-android"></i> Android</a
+                                        ><i class="fa-brands fa-android"></i>
+                                        Android</a
                                     >
                                 </li>
                             </ul>
@@ -241,7 +251,7 @@
                         </button>
                         <div
                             id="dropdown3"
-                            class="absolute top-[52px] -right-6 md:top-24 md:-right-5 mt-2 w-40 bg-white dark:bg-gray-700 rounded-xl shadow-lg hidden"
+                            class="dropdown-card hidden"
                             onmouseenter="showDropdown('dropdown3')"
                             onmouseleave="hideDropdown('dropdown3')"
                         >
@@ -250,21 +260,24 @@
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-windows"></i> Windows</a
+                                        ><i class="fa-brands fa-windows"></i>
+                                        Windows</a
                                     >
                                 </li>
                                 <li>
                                     <as
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-linux"></i> Linux</as
+                                        ><i class="fa-brands fa-linux"></i>
+                                        Linux</as
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-android"></i> Android</a
+                                        ><i class="fa-brands fa-android"></i>
+                                        Android</a
                                     >
                                 </li>
                             </ul>
