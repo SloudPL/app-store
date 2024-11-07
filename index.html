@@ -15,68 +15,102 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <style type="text/tailwindcss">
             @layer utilities {
-                .items_header {
-                    @apply px-2 py-1 rounded-md hover:text-blue-500 hover:bg-gray-100 dark:hover:text-blue-400 dark:hover:bg-gray-800 transition;
+                .items_navbar {
+                    @apply px-4 py-3 md:px-2 md:py-1 rounded-md md:text-base hover:text-blue-500 hover:bg-gray-100 dark:hover:text-blue-400 dark:hover:bg-gray-700 transition;
+                }
+
+                .btns-download {
+                    @apply px-4 py-2 sm:py-3 md:px-6 md:py-3 text-xl sm:text-lg md:text-base text-white font-medium bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 rounded-xl transition;
+                }
+
+                .container-card {
+                    @apply relative grid md:flex md:justify-between items-center gap-3 cursor-pointer;
+                }
+
+                .info-card {
+                    @apply relative grid gap-3;
+                }
+
+                .img-card {
+                    @apply xs:h-40 sm:h-full md:w-40 md:h-40 rounded-2xl object-cover;
+                }
+
+                .title-card {
+                    @apply sm:text-lg md:text-2xl font-medium dark:text-gray-100;
+                }
+
+                .descr-card {
+                    @apply text-xs sm:text-base md:text-lg text-gray-400 dark:text-gray-400;
+                }
+
+                .dropdown-card {
+                    @apply absolute -bottom-[120px] md:-bottom-3.5 md:-right-5 mt-2 w-full md:w-40 bg-white dark:bg-gray-700 rounded-xl z-10 shadow-lg;
                 }
             }
         </style>
         <script>
             tailwind.config = {
                 darkMode: "class",
+                theme: {
+                    extend: {
+                        screens: {
+                            xs: "400px",
+                        },
+                    },
+                },
             };
         </script>
     </head>
     <body class="dark:bg-gray-900 dark:text-gray-200">
-        <header
-            class="flex justify-between items-center px-10 py-4 border-b dark:border-gray-700"
+        <nav
+            class="relative flex justify-between items-center px-10 py-4 border-b dark:border-gray-700"
         >
-            <h3 class="text-2xl font-medium dark:text-gray-100">SloudApps</h3>
-            <ul class="flex gap-2">
-                <li class="items_header dark:text-gray-300">
+            <h3 class="sm:text-lg md:text-2xl font-medium dark:text-gray-100">
+                SloudApps
+            </h3>
+            <ul
+                class="list-navbar hidden absolute md:relative top-12 md:top-0 right-2 md:flex md:items-center md:gap-2 p-2 md:p-2 bg-white dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent rounded-md z-10"
+            >
+                <li class="items_navbar dark:text-gray-300">
                     <a href="https://sloud.pl/"> Strona Główna </a>
                 </li>
-                <li class="items_header dark:text-gray-300">
+                <li class="items_navbar dark:text-gray-300">
                     <a href="https://status.sloud.pl/"> Status </a>
                 </li>
-                <li class="items_header dark:text-gray-300">
+                <li class="items_navbar dark:text-gray-300">
                     <a href="https://speedtest.sloudhost.ovh/"> Speedtest </a>
                 </li>
                 <li class="flex items-center">
                     <button
-                        class="dark-theme w-8 h-8 hover:text-blue-500 dark:hover:text-blue-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition"
+                        class="dark-theme w-full h-12 md:w-8 md:h-8 hover:text-blue-500 dark:hover:text-blue-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition"
                     >
                         <i class="fa-solid fa-moon hidden dark:block"></i>
                         <i class="fa-solid fa-sun hidden dark:hidden"></i>
                     </button>
                 </li>
             </ul>
-        </header>
-        <main class="h-full bg-gray-50 dark:bg-gray-900">
-            <div class="px-10 py-5">
-                <h3 class="mb-3 text-2xl font-medium dark:text-gray-100">
-                    Aplikacje
-                </h3>
-                <div
-                    class="grid xl:grid-cols-2 gap-5 p-8 bg-white dark:bg-gray-800 rounded-2xl"
-                >
-                    <div
-                        class="relative flex justify-between items-center gap-3 cursor-pointer"
-                    >
-                        <div class="flex gap-5">
+            <button class="hamburger md:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <main class="h-full px-10 py-5 bg-gray-50 dark:bg-gray-900">
+            <h3 class="mb-3 text-2xl font-medium dark:text-gray-100">
+                Aplikacje
+            </h3>
+            <div
+                class="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-5"
+            >
+                <div class="p-8 bg-white dark:bg-gray-800 rounded-2xl">
+                    <div class="container-card">
+                        <div class="info-card">
                             <img
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfEhguRRbwfoedGpldqYUPlSnhhol80KUcRg&s"
+                                src="./img/app.png"
                                 alt="app"
-                                class="w-40 rounded-2xl"
+                                class="img-card"
                             />
                             <div class="grid content-center">
-                                <h6
-                                    class="text-2xl font-medium dark:text-gray-100"
-                                >
-                                    Example name of app
-                                </h6>
-                                <p
-                                    class="text-lg text-gray-400 dark:text-gray-400"
-                                >
+                                <h6 class="title-card">Example name of app</h6>
+                                <p class="descr-card">
                                     Description for app
                                     <br />
                                     Version: 1.0.0
@@ -84,15 +118,16 @@
                             </div>
                         </div>
                         <button
-                            class="px-6 py-3 text-white font-medium bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 rounded-xl transition"
+                            class="btns-download"
                             onmouseenter="showDropdown('dropdown1')"
                             onmouseleave="hideDropdown('dropdown1')"
+                            onclick="clickDropdown('dropdown1')"
                         >
                             Download
                         </button>
                         <div
                             id="dropdown1"
-                            class="absolute top-24 -right-5 mt-2 w-40 bg-white dark:bg-gray-700 rounded-xl shadow-lg hidden"
+                            class="dropdown-card hidden"
                             onmouseenter="showDropdown('dropdown1')"
                             onmouseleave="hideDropdown('dropdown1')"
                         >
@@ -101,21 +136,156 @@
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-windows"></i> Windows</a
+                                        ><i class="fa-brands fa-windows"></i>
+                                        Windows</a
+                                    >
+                                </li>
+                                <li>
+                                    <as
+                                        href="#"
+                                        class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
+                                        ><i class="fa-brands fa-linux"></i>
+                                        Linux</as
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-linux"></i> Linux</a
+                                        ><i class="fa-brands fa-android"></i>
+                                        Android</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-white dark:bg-gray-800 rounded-2xl">
+                    <div class="container-card">
+                        <div class="info-card">
+                            <img
+                                src="./img/app.png"
+                                alt="app"
+                                class="img-card"
+                            />
+                            <div class="grid content-center">
+                                <h6
+                                    class="sm:text-lg md:text-2xl font-medium dark:text-gray-100"
+                                >
+                                    Example name of app
+                                </h6>
+                                <p
+                                    class="text-xs sm:text-base md:text-lg text-gray-400 dark:text-gray-400"
+                                >
+                                    Description for app
+                                    <br />
+                                    Version: 1.0.0
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="btns-download"
+                            onmouseenter="showDropdown('dropdown2')"
+                            onmouseleave="hideDropdown('dropdown2')"
+                            onclick="clickDropdown('dropdown2')"
+                        >
+                            Download
+                        </button>
+                        <div
+                            id="dropdown2"
+                            class="dropdown-card hidden"
+                            onmouseenter="showDropdown('dropdown2')"
+                            onmouseleave="hideDropdown('dropdown2')"
+                        >
+                            <ul class="text-gray-700 dark:text-gray-200">
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
+                                        ><i class="fa-brands fa-windows"></i>
+                                        Windows</a
+                                    >
+                                </li>
+                                <li>
+                                    <as
+                                        href="#"
+                                        class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
+                                        ><i class="fa-brands fa-linux"></i>
+                                        Linux</as
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#"
                                         class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
-                                        ><i class="fa-brands fa-android"></i> Android</a
+                                        ><i class="fa-brands fa-android"></i>
+                                        Android</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-white dark:bg-gray-800 rounded-2xl">
+                    <div class="container-card">
+                        <div class="info-card">
+                            <img
+                                src="./img/app.png"
+                                alt="app"
+                                class="img-card"
+                            />
+                            <div class="grid content-center">
+                                <h6
+                                    class="sm:text-lg md:text-2xl font-medium dark:text-gray-100"
+                                >
+                                    Example name of app
+                                </h6>
+                                <p
+                                    class="text-xs sm:text-base md:text-lg text-gray-400 dark:text-gray-400"
+                                >
+                                    Description for app
+                                    <br />
+                                    Version: 1.0.0
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="btns-download"
+                            onmouseenter="showDropdown('dropdown3')"
+                            onmouseleave="hideDropdown('dropdown3')"
+                            onclick="clickDropdown('dropdown3')"
+                        >
+                            Download
+                        </button>
+                        <div
+                            id="dropdown3"
+                            class="dropdown-card hidden"
+                            onmouseenter="showDropdown('dropdown3')"
+                            onmouseleave="hideDropdown('dropdown3')"
+                        >
+                            <ul class="text-gray-700 dark:text-gray-200">
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
+                                        ><i class="fa-brands fa-windows"></i>
+                                        Windows</a
+                                    >
+                                </li>
+                                <li>
+                                    <as
+                                        href="#"
+                                        class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
+                                        ><i class="fa-brands fa-linux"></i>
+                                        Linux</as
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="block px-4 py-2 rounded-xl hover:bg-blue-100 dark:hover:bg-gray-600 transition"
+                                        ><i class="fa-brands fa-android"></i>
+                                        Android</a
                                     >
                                 </li>
                             </ul>
@@ -125,10 +295,16 @@
             </div>
         </main>
         <footer class="px-10 py-5 border-t dark:border-gray-700">
-            <p class="dark:text-gray-300">Made by: SloudPL & LakioLive</p>
-            <p class="dark:text-gray-300">Copyright SLOUD.PL © 2024</p>
+            <p class="text-sm md:text-base dark:text-gray-300">
+                Made by: SloudPL & LakioLive
+            </p>
+            <p class="text-sm md:text-base dark:text-gray-300">
+                Copyright SLOUD.PL © 2024
+            </p>
         </footer>
     </body>
+
     <script src="./js/darkTheme.js"></script>
     <script src="./js/dropdown.js"></script>
+    <script src="./js/hamburger.js"></script>
 </html>
