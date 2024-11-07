@@ -15,8 +15,8 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <style type="text/tailwindcss">
             @layer utilities {
-                .items_header {
-                    @apply px-2 py-1 rounded-md text-xs sm:text-sm md:text-base hover:text-blue-500 hover:bg-gray-100 dark:hover:text-blue-400 dark:hover:bg-gray-800 transition;
+                .items_navbar {
+                    @apply px-4 py-3 md:px-2 md:py-1 rounded-md md:text-base hover:text-blue-500 hover:bg-gray-100 dark:hover:text-blue-400 dark:hover:bg-gray-700 transition;
                 }
 
                 .btns-download {
@@ -63,30 +63,35 @@
     </head>
     <body class="dark:bg-gray-900 dark:text-gray-200">
         <nav
-            class="flex justify-between items-center px-10 py-4 border-b dark:border-gray-700"
+            class="relative flex justify-between items-center px-10 py-4 border-b dark:border-gray-700"
         >
             <h3 class="sm:text-lg md:text-2xl font-medium dark:text-gray-100">
                 SloudApps
             </h3>
-            <ul class="flex items-center gap-2">
-                <li class="items_header dark:text-gray-300">
+            <ul
+                class="list-navbar hidden absolute md:relative top-12 md:top-0 right-2 md:flex md:items-center md:gap-2 p-2 md:p-2 bg-white dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent rounded-md z-10"
+            >
+                <li class="items_navbar dark:text-gray-300">
                     <a href="https://sloud.pl/"> Strona Główna </a>
                 </li>
-                <li class="items_header dark:text-gray-300">
+                <li class="items_navbar dark:text-gray-300">
                     <a href="https://status.sloud.pl/"> Status </a>
                 </li>
-                <li class="items_header dark:text-gray-300">
+                <li class="items_navbar dark:text-gray-300">
                     <a href="https://speedtest.sloudhost.ovh/"> Speedtest </a>
                 </li>
                 <li class="flex items-center">
                     <button
-                        class="dark-theme w-8 h-8 hover:text-blue-500 dark:hover:text-blue-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition"
+                        class="dark-theme w-full h-12 md:w-8 md:h-8 hover:text-blue-500 dark:hover:text-blue-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md transition"
                     >
                         <i class="fa-solid fa-moon hidden dark:block"></i>
                         <i class="fa-solid fa-sun hidden dark:hidden"></i>
                     </button>
                 </li>
             </ul>
+            <button class="hamburger md:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
         <main class="h-full px-10 py-5 bg-gray-50 dark:bg-gray-900">
             <h3 class="mb-3 text-2xl font-medium dark:text-gray-100">
@@ -116,6 +121,7 @@
                             class="btns-download"
                             onmouseenter="showDropdown('dropdown1')"
                             onmouseleave="hideDropdown('dropdown1')"
+                            onclick="clickDropdown('dropdown1')"
                         >
                             Download
                         </button>
@@ -181,6 +187,7 @@
                             class="btns-download"
                             onmouseenter="showDropdown('dropdown2')"
                             onmouseleave="hideDropdown('dropdown2')"
+                            onclick="clickDropdown('dropdown2')"
                         >
                             Download
                         </button>
@@ -246,6 +253,7 @@
                             class="btns-download"
                             onmouseenter="showDropdown('dropdown3')"
                             onmouseleave="hideDropdown('dropdown3')"
+                            onclick="clickDropdown('dropdown3')"
                         >
                             Download
                         </button>
@@ -295,6 +303,8 @@
             </p>
         </footer>
     </body>
+
     <script src="./js/darkTheme.js"></script>
     <script src="./js/dropdown.js"></script>
+    <script src="./js/hamburger.js"></script>
 </html>
