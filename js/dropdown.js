@@ -1,7 +1,7 @@
 const showDropdown = (id) => {
     const dropdown = document.querySelector(`#${id}`);
 
-    if (dropdown.classList.contains("hidden")) {
+    if (window.innerWidth > 800 && dropdown.classList.contains("hidden")) {
         dropdown.classList.remove("hidden");
     }
 };
