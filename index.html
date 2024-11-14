@@ -20,7 +20,7 @@
                 }
 
                 .btns_download {
-                    @apply px-4 py-2 sm:py-3 md:px-6 md:py-3 text-xl sm:text-lg md:text-base text-white font-medium bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 rounded-xl transition;
+                    @apply w-full px-4 py-2 sm:py-3 md:px-6 md:py-3 text-xl sm:text-lg md:text-base text-white font-medium bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 rounded-xl transition;
                 }
 
                 .wrapper_card {
@@ -48,7 +48,7 @@
                 }
 
                 .dropdown_card {
-                    @apply absolute top-[292px] md:top-[145px] md:-right-5 mt-2 w-full h-min md:w-40 bg-white dark:bg-gray-700 rounded-xl z-10 shadow-lg;
+                    @apply absolute top-9 md:top-10 md:-right-5 mt-2 w-full h-min md:w-40 bg-white dark:bg-gray-700 rounded-xl z-10 shadow-lg;
                 }
 
                 .items-dropdown_card {
@@ -132,40 +132,34 @@
                                 </p>
                             </div>
                         </div>
-                        <button
-                            class="btns_download"
-                            onmouseenter="showDropdown('dropdown1')"
-                            onmouseleave="hideDropdown('dropdown1')"
-                            onclick="clickDropdown('dropdown1')"
-                        >
-                            Download
-                        </button>
-                        <div
-                            id="dropdown1"
-                            class="dropdown_card hidden"
-                            onmouseenter="showDropdown('dropdown1')"
-                            onmouseleave="hideDropdown('dropdown1')"
-                        >
-                            <ul class="text-gray-700 dark:text-gray-200">
-                                <li>
-                                    <a href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-windows"></i>
-                                        Windows</a
-                                    >
-                                </li>
-                                <li>
-                                    <as href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-linux"></i>
-                                        Linux</as
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-android"></i>
-                                        Android</a
-                                    >
-                                </li>
-                            </ul>
+                        <div class="relative">
+                            <button class="btns_download">Download</button>
+                            <div class="dropdown_card hidden">
+                                <ul class="text-gray-700 dark:text-gray-200">
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i
+                                                class="fa-brands fa-windows"
+                                            ></i>
+                                            Windows</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i class="fa-brands fa-linux"></i>
+                                            Linux</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i
+                                                class="fa-brands fa-android"
+                                            ></i>
+                                            Android</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,40 +180,34 @@
                                 </p>
                             </div>
                         </div>
-                        <button
-                            class="btns_download"
-                            onmouseenter="showDropdown('dropdown2')"
-                            onmouseleave="hideDropdown('dropdown2')"
-                            onclick="clickDropdown('dropdown2')"
-                        >
-                            Download
-                        </button>
-                        <div
-                            id="dropdown2"
-                            class="dropdown_card hidden"
-                            onmouseenter="showDropdown('dropdown2')"
-                            onmouseleave="hideDropdown('dropdown2')"
-                        >
-                            <ul class="text-gray-700 dark:text-gray-200">
-                                <li>
-                                    <a href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-windows"></i>
-                                        Windows</a
-                                    >
-                                </li>
-                                <li>
-                                    <as href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-linux"></i>
-                                        Linux</as
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-android"></i>
-                                        Android</a
-                                    >
-                                </li>
-                            </ul>
+                        <div class="relative">
+                            <button class="btns_download">Download</button>
+                            <div class="dropdown_card hidden">
+                                <ul class="text-gray-700 dark:text-gray-200">
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i
+                                                class="fa-brands fa-windows"
+                                            ></i>
+                                            Windows</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i class="fa-brands fa-linux"></i>
+                                            Linux</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i
+                                                class="fa-brands fa-android"
+                                            ></i>
+                                            Android</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,40 +228,34 @@
                                 </p>
                             </div>
                         </div>
-                        <button
-                            class="btns_download"
-                            onmouseenter="showDropdown('dropdown3')"
-                            onmouseleave="hideDropdown('dropdown3')"
-                            onclick="clickDropdown('dropdown3')"
-                        >
-                            Download
-                        </button>
-                        <div
-                            id="dropdown3"
-                            class="dropdown_card hidden"
-                            onmouseenter="showDropdown('dropdown3')"
-                            onmouseleave="hideDropdown('dropdown3')"
-                        >
-                            <ul class="text-gray-700 dark:text-gray-200">
-                                <li>
-                                    <a href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-windows"></i>
-                                        Windows</a
-                                    >
-                                </li>
-                                <li>
-                                    <as href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-linux"></i>
-                                        Linux</as
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#" class="items-dropdown_card"
-                                        ><i class="fa-brands fa-android"></i>
-                                        Android</a
-                                    >
-                                </li>
-                            </ul>
+                        <div class="relative">
+                            <button class="btns_download">Download</button>
+                            <div class="dropdown_card hidden">
+                                <ul class="text-gray-700 dark:text-gray-200">
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i
+                                                class="fa-brands fa-windows"
+                                            ></i>
+                                            Windows</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i class="fa-brands fa-linux"></i>
+                                            Linux</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="items-dropdown_card"
+                                            ><i
+                                                class="fa-brands fa-android"
+                                            ></i>
+                                            Android</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
